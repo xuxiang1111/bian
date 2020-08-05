@@ -1,0 +1,30 @@
+1、学习tomcat的目录结构
+	bin
+		startup.sh
+		shutdown.sh
+	conf	configuration 软件的配置目
+		xml、yml、json、properties
+		server.xml
+			69行有端口号：8080
+		tomcat-user.xml
+			倒数第二行，加入
+
+<role rolename="manager"/>
+<role rolename="manager-gui"/>  
+<role rolename="admin"/>
+<role rolename="admin-gui"/>
+<user username="admin" password="admin" roles="admin-gui,admin,manager-gui,manager"/>
+
+	lib（了解，存放的是jar）
+	temp（了解，存放临时文件）
+	webapps（存放应用程序的代码）	
+
+
+2、修改端口号
+	注意：修改后要重启才能生效
+
+3、配置对应的用户信息用来管理tomcat
+	conf/tomcat-user.xml
+8005  8089
+8006  8082
+8007  8083
