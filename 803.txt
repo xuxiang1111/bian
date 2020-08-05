@@ -1,0 +1,54 @@
+window:rar、zip，边打包，边压缩
+rar是不能在linux上得到解压
+zip：压缩、解压
+	unzip 压缩包名   （最多）
+	zip -r 包名 文件/文件夹
+
+linux打包和压缩是分开
+tar（打包）	
+-c将解压缩的结果显示到屏幕上，并对字符做适当的转换
+ --delete 用于删除对象的某个属性
+-r 增文件到已存在的备份文件的结尾部分。
+-t 检查压缩文件是否正确
+-x <文件> 指定不要处理.zip压缩文件中的哪些文件
+-f 更新现有的文件
+ -v  执行是时显示详细的信息
+[-z] 仅显示压缩文件的备注文字
+
+压缩：
+	tar cvf 包名.tar 文件/文件夹
+解压：
+	tar xvf 包名.tar
+查看压缩包的内容：
+	tar -tf 包名.tar
+追加文件/文件夹到压缩包：
+	tar -rf 包名.tar
+把压缩包中的内容删除掉：
+	tar --delete -f 包名.tar 文件/文件夹
+
+gz (压缩)
+	gzip 包名.tar
+	gunzip 包名.tar.gz
+ 
+
+工作中，我们几乎是和window想法一致的，边打包，边压缩
+压缩：
+	tar zcvf 包名.tar.gz 文件/文件夹
+解压：
+	tar zxvf 包名.tar.gz
+	重定向: >  >>
+		> 如果没有这个文件，就自动给你生成一个
+		  如果有这个文件，就替换掉（把原有内容覆盖）
+		>>追加内容到文件
+
+history
+
+free：
+df -h：磁盘占有比   ---- du -sh *
+
+service 服务名 状态
+         setup---system service---开机启动或不启动
+dmesg:
+
+	ps -ef | grep * 查看某进程
+	
